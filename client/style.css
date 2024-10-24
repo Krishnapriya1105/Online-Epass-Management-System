@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    
+
+header {
+    background: rgba(48, 48, 47, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff6600; 
+}
+
+/* Home Section */
+#home {
+    background-color: rgb(29, 115, 189);
+    
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: rgba(36, 215, 30, 0.5);
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+    
+}
+
+#home h1 {
+    font-size: 4rem; 
+    margin-bottom: 20px;
+    z-index: 2;
+    color: #da5ede;
+}
+
+#home p {
+    font-size: 25px;
+    margin-bottom: 30px;
+    max-width: 600px;   
+    z-index: 2;
+    color: rgb(238, 234, 236);
+    text-decoration: none;
+    font-style: oblique;
+
+}
+/* About Us Section Styles */
+#about {
+    height: 100vh; /* Full viewport height */
+    background-image: url('client/about-bg.jpeg'); /* Background image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: #fff; /* Light text color for contrast */
+    text-align: center; /* Center text alignment */
+}
+
+.about-content {
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
+    background-color: aliceblue;
+    padding: 40px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 800px; /* Maximum width of the content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+h1 {
+    font-size: 48px; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    color: black;
+}
+
+h2 {
+    font-size: 32px; /* Subheading size */
+    margin: 20px 0; /* Margin around subheadings */
+    color: black;
+}
+}
+
+p {
+    font-size: 20px; /* Paragraph size */
+    margin: 10px 0; /* Margin between paragraphs */
+    color: black;
+}
+
+.content {
+    padding: 50px 0; /* Adds top and bottom padding */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 40px; /* Adds space below the heading */
+    color: #333; /* Darker text color */
+}
+#services{
+    background-color: aliceblue;
+}
+.services-grid {
+    
+    display: grid; /* Using grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between the cards */
+}
+
+.service-card {
+    
+    background-color: aliceblue;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the card */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+}
+
+.service-card h3 {
+    margin-bottom: 10px; /* Space below the heading */
+    color: #007bff; /* Blue color for headings */
+}
+
+.service-card p {
+    color: #555; /* Darker gray for paragraph text */
+    line-height: 1.5; /* Space between lines */
+}
+
+
+/* Contact Us Section Styles */
+#contact {
+    height: 100vh; /* Full viewport height */
+    background-color: white;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    display: flex; /* Use Flexbox for alignment */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    color: #fff; /* Light text color for contrast */
+    text-align: center; /* Center text alignment */
+}
+
+.contact-content {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for readability */
+    background-color: aliceblue;
+    padding: 40px; /* Padding around the content */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 600px; /* Maximum width of the content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+h1 {
+    font-size: 48px; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+p {
+    font-size: 20px; /* Paragraph size */
+    margin: 10px 0; /* Margin between paragraphs */
+    color: black;
+}
+
+label {
+    font-size: 18px; /* Label size */
+    margin-top: 10px; /* Space above label */
+    color: black;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Full width of the input/textarea */
+    padding: 10px; /* Padding inside the input */
+    margin: 10px 0; /* Space between inputs */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+textarea {
+    resize: none; /* Disable resizing for textarea */
+}
+
+.submit-button {
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    padding: 12px 20px; /* Padding */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+/* Change button background on hover */
+.submit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+#register {
+    background-color: aliceblue;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    height: 100vh;
+    width: 100vw;
+   
+    background-repeat: no-repeat;
+    padding: 50px 20px; /* Padding around the section */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Maximum width of the form */
+    margin: auto; /* Centering the section */
+}
+
+/* Heading styles */
+#register h1 {
+    
+    color: #333; /* Dark text color */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+/* Form group styles */
+.form-group {
+    background: rgba(0, 0, 0, 0.5);
+    background-color: aliceblue;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    height: 100vh;
+    margin-bottom: 20px; 
+    width: 100vw;/* Space below each form group */
+}
+
+/* Label styles */
+label {
+    
+    display: block; /* Make labels block elements */
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside input fields */
+    border: 2px solid #162ee2; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+/* Change border color on focus */
+input:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+button {
+    background-color: #2E86C1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #1C6396;
+}
+
+
+/* Content Sections */
+.content {
+    padding: 50px 0; /* Adds top and bottom padding */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 40px; /* Adds space below the heading */
+    color: #333; /* Darker text color */
+}
+
+.services-grid {
+    display: grid; /* Using grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between the cards */
+}
+
+.service-card {
+    background-color: #fff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Padding inside the card */
+    transition: transform 0.3s; /* Animation for hover effect */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+}
+
+.service-card h3 {
+    margin-bottom: 10px; /* Space below the heading */
+    color: #007bff; /* Blue color for headings */
+}
+
+.service-card p {
+    color: #555; /* Darker gray for paragraph text */
+    line-height: 1.5; /* Space between lines */
+}
+section {
+    display: none; /* Hide all sections by default */
+}
+
+section.active {
+    display: block; /* Show only the active section */
+}
+
+
+footer {
+    background: rgba(167, 172, 167, 0.8);
+    color: #e4821f;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    
+}

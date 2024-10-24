@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow: hidden; /* Disable scrolling */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed; /* Fixed position for the header */
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .navbar li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        section {
+            display: none; /* Hide sections by default */
+            padding: 100px; /* Add padding to accommodate fixed header */
+            height: 100vh; /* Full viewport height */
+            box-sizing: border-box; /* Include padding in height calculation */
+        }
+
+        #home {
+            background-image: url('your-home-background-image.jpg'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        #about {
+            background-color: #f4f4f4;
+        }
+
+        #services {
+            background-color: #e2e2e2;
+        }
+
+        #contact {
+            background-color: #d0d0d0;
+        }
+
+        #register {
+            background-color: #c0c0c0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0; /* Stick footer to bottom */
+        }
+
+        .active {
+            display: block; /* Show active section */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About Us</a></li>
+                <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact Us</a></li>
+                <li><a href="#register" onclick="showSection('register')">Register for E-Pass</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="active">
+        <h1>Welcome to E-Pass Management System</h1>
+        <p>Travel safely and efficiently with our streamlined e-pass system. Whether you need to travel during emergencies, lockdowns, or restricted periods, our system ensures a hassle-free process for requesting, tracking, and obtaining your e-pass online.</p>
+        <p>With our efficient management system, we aim to make necessary travel safer and more accessible for everyone. Start your application today and get on your way with confidence!</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="about-content">
+            <h1>About Us</h1>
+            <p>We are dedicated to providing efficient and reliable E-Pass registration services.</p>
+            <h2>Our Vision</h2>
+            <p>To be the leading service provider for E-Pass registrations, ensuring satisfaction and ease of use for our customers.</p>
+            <h2>Our Mission</h2>
+            <p>To make the process of obtaining travel passes seamless and user-friendly.</p>
+            <h2>Our Team</h2>
+            <p>Our team consists of professionals with years of experience in travel documentation and customer service, committed to supporting you at every step.</p>
+        </div>
+        
+    </section>
+
+
+<!-- Services Section -->
+<section id="services" class="content">
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>E-Pass Registration</h3>
+                <p>Quick and easy online registration for your travel pass.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Document Verification</h3>
+                <p>Automated document checks to ensure compliance with travel requirements.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock assistance to help you with any queries or issues.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Secure Data</h3>
+                <p>Industry-standard security to protect your personal information.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Instant E-Pass</h3>
+                <p>Receive your E-Pass immediately upon approval.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Notifications</h3>
+                <p>Stay updated with real-time alerts on your E-Pass status.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="contact-content">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, feel free to reach out!</p>
+            <p><strong>Email:</strong> support@example.com</p>
+            <p><strong>Phone:</strong> +91 9534252890</p>
+            <form id="contact-form" action="/send-message" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+    
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+
+    <!-- Register Section -->
+    <section id="register" class="content">
+        <h1>Register for E-Pass</h1><br>
+        <p>Fill in your details below:</p>
+        <form id="registration-form" method="POST" action="/signup">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+    
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+    
+            <label for="purpose">Purpose:</label><br>
+            <input type="text" id="purpose" name="purpose" required><br>
+    
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Epass Management. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
